@@ -4,6 +4,7 @@ class productcontroller
     
     public static function viewed()
     {
+
         $id = $_POST['id'];
         $result = ProductModel::getByProduct($id);
         if(!empty($result)){
