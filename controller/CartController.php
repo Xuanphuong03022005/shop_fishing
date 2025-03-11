@@ -3,6 +3,7 @@ class CartController
 {
     public function discountCode()
     {
+        // Commit vidu
         // Đặt kiểu dữ liệu trả về là JSON
         header('Content-Type: application/json');
         if (isset($_POST['discount_code'])) {
