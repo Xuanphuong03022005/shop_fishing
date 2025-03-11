@@ -1,9 +1,10 @@
 <?php 
 class LoginModel{
     public static function addUser($user_name, $phone, $email, $user_account, $password){
-        $db123 = Database::getDB();
+        $db = Database::getDB();
         $query = "INSERT INTO user(name, phone_number, email, user_account, password)
          VALUE (?, ?, ?, ?, ?)";
+        $statement =$db->prepare($query);
         $statement->bindParam(1, $user_name);
         $statement->bindParam(2, $phone);
         $statement->bindParam(3, $email);
